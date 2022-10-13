@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 436507683
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: "M\xFCcevher"
+    uniqueID: 1861650233
+    locked: 0
+  - name: Efektler
+    uniqueID: 3373356219
     locked: 0
