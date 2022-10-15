@@ -76,5 +76,87 @@ public class EslesmeBehaviour : MonoBehaviour
         {
             BulunanMucevherlerListe = BulunanMucevherlerListe.Distinct().ToList();
         }
+
+        BombayiBul();
+    }
+
+    public void BombayiBul()
+    {
+        for (int i = 0; i < BulunanMucevherlerListe.Count; i++)
+        {
+            Mucevher mucevher = BulunanMucevherlerListe[i];
+
+            int x = mucevher.posIndex.x;
+            int y = mucevher.posIndex.y;
+
+            if (mucevher.posIndex.x > 0)
+            {
+                if (board.tumMucevherler[x - 1, y] != null)
+                {
+                    if (board.tumMucevherler[x - 1, y].tipi == Mucevher.MucevherTipi.bomba)
+                    {
+                        BombaBolgesiniIsaretle(new Vector2Int(x - 1, y), board.tumMucevherler[x - 1, y]);
+                    }
+                }
+            }
+
+            if (mucevher.posIndex.x < board.genislik - 1)
+            {
+                if (board.tumMucevherler[x + 1, y] != null)
+                {
+                    if (board.tumMucevherler[x + 1, y].tipi == Mucevher.MucevherTipi.bomba)
+                    {
+                        BombaBolgesiniIsaretle(new Vector2Int(x + 1, y), board.tumMucevherler[x + 1, y]);
+                    }
+                }
+            }
+
+
+            if (mucevher.posIndex.y > 0)
+            {
+                if (board.tumMucevherler[x, y - 1] != null)
+                {
+                    if (board.tumMucevherler[x, y - 1].tipi == Mucevher.MucevherTipi.bomba)
+                    {
+                        BombaBolgesiniIsaretle(new Vector2Int(x, y - 1), board.tumMucevherler[x, y - 1]);
+                    }
+                }
+            }
+
+
+            if (mucevher.posIndex.y < board.yukseklik - 1)
+            {
+                if (board.tumMucevherler[x, y + 1] != null)
+                {
+                    if (board.tumMucevherler[x, y + 1].tipi == Mucevher.MucevherTipi.bomba)
+                    {
+                        BombaBolgesiniIsaretle(new Vector2Int(x, y + 1), board.tumMucevherler[x, y + 1]);
+                    }
+                }
+            }
+        }
+    }
+
+    public void BombaBolgesiniIsaretle(Vector2Int bombaPos, Mucevher bomba)
+    {
+        for (int x = bombaPos.x - bomba.bombaHacmi; x <= bombaPos.x + bomba.bombaHacmi; x++)
+        {
+            for (int y = bombaPos.y - bomba.bombaHacmi; y <= bombaPos.y + bomba.bombaHacmi; y++)
+            {
+                if (x >= 0 && x < board.genislik - 1 && y >= 0 && y < board.yukseklik - 1)
+                {
+                    if (board.tumMucevherler[x, y] != null)
+                    {
+                        board.tumMucevherler[x, y].eslestimi = true;
+                        BulunanMucevherlerListe.Add(board.tumMucevherler[x, y]);
+                    }
+                }
+            }
+        }
+
+        if (BulunanMucevherlerListe.Count > 0)
+        {
+            BulunanMucevherlerListe = BulunanMucevherlerListe.Distinct().ToList();
+        }
     }
 }

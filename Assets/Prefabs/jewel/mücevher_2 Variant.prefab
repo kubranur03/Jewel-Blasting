@@ -63,5 +63,9 @@ PrefabInstance:
       propertyPath: tipi
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2774191798964555308, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
+      propertyPath: mucevherEfekt
+      value: 
+      objectReference: {fileID: 3149491848760296104, guid: 4febb1a6f72ffe94c89f2cf7df5e0eb3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8f003640e2de214db5dca98ce637acf, type: 3}

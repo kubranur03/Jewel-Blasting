@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7820056630557271044
+--- !u!1001 &8456282630916989746
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 988629337512338706, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 988629337512338706, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53,19 +53,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 988629337512338708, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
       propertyPath: m_Name
-      value: "m\xFCcevher_5 Variant"
+      value: bomba Variant
       objectReference: {fileID: 0}
     - target: {fileID: 988629337512338709, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e7e03cc4c8d45f54caafcaebda8f6ca7, type: 3}
+      objectReference: {fileID: 21300000, guid: c632d514e52652141bde8840fb01cd8b, type: 3}
     - target: {fileID: 2774191798964555308, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
       propertyPath: tipi
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 2774191798964555308, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
-      propertyPath: mucevherEfekt
-      value: 
-      objectReference: {fileID: 7294904661740397446, guid: e28b5a8ce3462784cbcaa9b76ad5deab, type: 3}
+    - target: {fileID: 5364930573309227243, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5364930573309227243, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.6666667
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8f003640e2de214db5dca98ce637acf, type: 3}

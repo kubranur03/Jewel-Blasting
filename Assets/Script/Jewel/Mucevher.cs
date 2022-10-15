@@ -27,6 +27,10 @@ public class Mucevher : MonoBehaviour
 
     Vector2Int ilkPos;
 
+    public GameObject mucevherEfekt;
+
+    public int bombaHacmi;
+
 
 
 

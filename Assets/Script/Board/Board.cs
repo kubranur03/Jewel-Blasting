@@ -16,10 +16,14 @@ public class Board : MonoBehaviour
 
     public float MucevherHizi;
 
+    [HideInInspector]
     public EslesmeBehaviour eslesmeBehaviour;
 
     public enum BoardDurum { bekliyor, hareketEdiyor };
     public BoardDurum gecerliDurum = BoardDurum.hareketEdiyor;
+
+    public Mucevher bomba;
+    public float bombaCikmaSansi = 2f;
 
 
 
@@ -35,6 +39,14 @@ public class Board : MonoBehaviour
         tumMucevherler = new Mucevher[genislik, yukseklik];
 
         Duzenle();
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            BoardKaristir();
+        }
     }
 
 
@@ -78,6 +90,12 @@ public class Board : MonoBehaviour
 
     void MucevherOlustur(Vector2Int pos, Mucevher olusacakMucevher)
     {
+
+        if (Random.Range(0f, 100f) < bombaCikmaSansi)
+        {
+            olusacakMucevher = bomba;
+        }
+
         Mucevher mucevher = Instantiate(olusacakMucevher, new Vector3(pos.x, pos.y+yukseklik, 0f), Quaternion.identity);
         mucevher.transform.parent = this.transform;
         mucevher.name = "Mucevher -" + pos.x + " " + pos.y;
@@ -120,6 +138,7 @@ public class Board : MonoBehaviour
         {
             if (tumMucevherler[pos.x, pos.y].eslestimi)
             {
+                Instantiate(tumMucevherler[pos.x, pos.y].mucevherEfekt, new Vector2(pos.x, pos.y), Quaternion.identity);
                 Destroy(tumMucevherler[pos.x, pos.y].gameObject);
                 tumMucevherler[pos.x, pos.y] = null;
             }
