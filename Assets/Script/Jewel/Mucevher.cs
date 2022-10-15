@@ -31,6 +31,7 @@ public class Mucevher : MonoBehaviour
 
     public int bombaHacmi;
 
+    public int skorDegeri;
 
 
 
@@ -57,7 +58,7 @@ public class Mucevher : MonoBehaviour
         {
             mouseBasildi = false;
 
-            if (board.gecerliDurum == Board.BoardDurum.hareketEdiyor)
+            if (board.gecerliDurum == Board.BoardDurum.hareketEdiyor && !UIManager.instance.turBittimi)
             {
                 sonBasilanPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 AciyiHesapla();
@@ -70,14 +71,11 @@ public class Mucevher : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (board.gecerliDurum == Board.BoardDurum.hareketEdiyor)
+        if (board.gecerliDurum == Board.BoardDurum.hareketEdiyor && !UIManager.instance.turBittimi)
         {
             birinciBasilanPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mouseBasildi = true;
-
         }
-        birinciBasilanPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseBasildi = true;
     }
 
 
@@ -133,6 +131,8 @@ public class Mucevher : MonoBehaviour
         board.tumMucevherler[digerMucevher.posIndex.x, digerMucevher.posIndex.y] = digerMucevher;
 
         StartCoroutine(HareketiKontrolEtRouitne());
+
+
     }
 
 

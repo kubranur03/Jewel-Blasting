@@ -138,6 +138,14 @@ public class Board : MonoBehaviour
         {
             if (tumMucevherler[pos.x, pos.y].eslestimi)
             {
+                if (tumMucevherler[pos.x, pos.y].tipi == Mucevher.MucevherTipi.bomba)
+                {
+                    SoundManager.instance.PatlamaSesiCikar();
+                }
+                else
+                {
+                    SoundManager.instance.MucevherSesiCikar();
+                }
                 Instantiate(tumMucevherler[pos.x, pos.y].mucevherEfekt, new Vector2(pos.x, pos.y), Quaternion.identity);
                 Destroy(tumMucevherler[pos.x, pos.y].gameObject);
                 tumMucevherler[pos.x, pos.y] = null;
@@ -152,6 +160,7 @@ public class Board : MonoBehaviour
         {
             if (eslesmeBehaviour.BulunanMucevherlerListe[i] != null)
             {
+                UIManager.instance.PuaniArtir(eslesmeBehaviour.BulunanMucevherlerListe[i].skorDegeri);
                 EslesenMucevheriYokEt(eslesmeBehaviour.BulunanMucevherlerListe[i].posIndex);
             }
         }

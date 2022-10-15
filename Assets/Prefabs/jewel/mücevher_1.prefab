@@ -104,6 +104,8 @@ MonoBehaviour:
   tipi: 0
   eslestimi: 0
   mucevherEfekt: {fileID: 8157894768069580334, guid: 528214923a4e78343a53d51657c70877, type: 3}
+  bombaHacmi: 2
+  skorDegeri: 10
 --- !u!61 &5364930573309227243
 BoxCollider2D:
   m_ObjectHideFlags: 0

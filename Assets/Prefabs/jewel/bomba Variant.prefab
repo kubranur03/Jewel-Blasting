@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: tipi
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2774191798964555308, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
+      propertyPath: skorDegeri
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5364930573309227243, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.6666667
