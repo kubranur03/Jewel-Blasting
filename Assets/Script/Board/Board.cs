@@ -41,16 +41,7 @@ public class Board : MonoBehaviour
         Duzenle();
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            BoardKaristir();
-        }
-    }
-
-
-
+   
 
     void Duzenle()
     {

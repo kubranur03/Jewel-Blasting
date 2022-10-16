@@ -36,6 +36,7 @@ public class UIManager : MonoBehaviour
     Board board;
 
     public string anamenu;
+
     private void Awake()
     {
         instance = this;
@@ -103,4 +104,9 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(anamenu);
     }
 
+    public void OyunaDon()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(anamenu);
+    }
 }

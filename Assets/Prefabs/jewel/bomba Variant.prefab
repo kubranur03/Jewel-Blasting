@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: skorDegeri
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 2774191798964555308, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
+      propertyPath: mucevherEfekt
+      value: 
+      objectReference: {fileID: 3200275938642306197, guid: a50c65c55e79e394ab0b1429e76a3f24, type: 3}
     - target: {fileID: 5364930573309227243, guid: c8f003640e2de214db5dca98ce637acf, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.6666667

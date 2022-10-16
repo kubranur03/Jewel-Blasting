@@ -126,10 +126,9 @@ public class Mucevher : MonoBehaviour
                 digerMucevher.posIndex.x++;
                 posIndex.x--;
             }
-
         board.tumMucevherler[posIndex.x, posIndex.y] = this;
         board.tumMucevherler[digerMucevher.posIndex.x, digerMucevher.posIndex.y] = digerMucevher;
-
+   
         StartCoroutine(HareketiKontrolEtRouitne());
 
 
